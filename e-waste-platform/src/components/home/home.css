@@ -1,0 +1,34 @@
+/* HomePage.css */
+
+.homepage-container {
+    background-color: #f8f9fa; /* Light gray background for a clean look */
+    min-height: 100vh; /* Ensures full height to vertically center content */
+  }
+  
+  .homepage-title {
+    font-size: 2.5rem; /* Large and prominent title */
+    font-weight: 700; /* Bold text */
+    color: #343a40; /* Dark color for contrast */
+  }
+  
+  .homepage-subtitle {
+    font-size: 1.2rem; /* Subtitle with slightly smaller text */
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  .homepage-button {
+    font-size: 1.1rem; /* Slightly larger button text */
+    font-weight: 500; /* Medium weight for a balanced look */
+  }
+  
+  .card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 600px; /* Max width to keep it compact */
+    width: 100%; /* Ensure it takes full width on smaller screens */
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Soft shadow for a floating effect */
+  }
+  
