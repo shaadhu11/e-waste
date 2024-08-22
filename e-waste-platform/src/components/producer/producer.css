@@ -1,5 +1,6 @@
 .login-background {
-    
+
+    background-color: rgb(228, 159, 159);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -44,3 +45,23 @@
 .login-form .text-secondary {
     color: #737373;
 }
+
+
+
+.icons {
+    padding-top:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Ensures full height for vertical centering */
+    gap: 2rem;  /* Optional: Adjust the spacing between the icon and image */
+    
+}
+
+.image {
+    width: 2rem;  /* Set the desired size */
+    height: 2rem;  /* Ensures both icon and image are of the same size */
+}
+
+
+

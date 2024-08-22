@@ -1,7 +1,20 @@
 import React from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
-import './producer.css'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+import './producer.css';
+
 const Login = () => {
+    const navigate = useNavigate(); // Update here
+
+    const handleProducerReg = () => {
+        navigate('/reg-producer');
+    };
+
+
     return (
         <div className="login-background">
             <Container>
@@ -21,6 +34,17 @@ const Login = () => {
                                 <Button variant="danger" type="submit" className="mt-4 w-100">
                                     Sign In
                                 </Button>
+                                
+                                
+                                
+
+                            </Form>
+                            <div className='icons'>   
+                        
+                                         <img src='google.svg' alt='google' className='image'/>
+                                         <img src='apple.svg' alt='google' className='image'/>
+                                         <img src='facebook.svg' alt='google' className='image'/>
+                                </div>
 
                                 <div className="text-center mt-3">
                                     <Button variant="link" className="text-secondary">Use a sign-in code</Button>
@@ -29,14 +53,11 @@ const Login = () => {
                                     <a href="#" className="text-secondary">Forgot password?</a>
                                 </div>
 
-                                <Form.Group controlId="formRememberMe" className="mt-3">
-                                    <Form.Check type="checkbox" label="Remember me" />
-                                </Form.Group>
+                                
 
                                 <div className="text-center mt-3">
-                                    <span>New to Netflix? <a href="#" className="text-light">Sign up now.</a></span>
+                                    <span>New to E-Waste <a href="#" className="text-light" onClick={handleProducerReg}>  Sign up now.</a></span>
                                 </div>
-                            </Form>
                         </div>
                     </Col>
                 </Row>
