@@ -1,11 +1,6 @@
 import React from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-<<<<<<< HEAD
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import './producer.css'
-=======
-import './producer.css';
-
->>>>>>> 0bccefa9fae6fa746fc8ff5c1575cb7f1e0ac575
 const Login = () => {
     return (
         <div className="login-background">
@@ -51,7 +46,3 @@ const Login = () => {
 };
 
 export default Login;
-<<<<<<< HEAD
-=======
-
->>>>>>> 0bccefa9fae6fa746fc8ff5c1575cb7f1e0ac575
