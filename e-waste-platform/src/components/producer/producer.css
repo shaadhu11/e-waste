@@ -1,0 +1,43 @@
+.login-background {
+    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.login-form h3 {
+    color: white;
+}
+
+.login-form .form-control {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.login-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.login-form .btn-danger {
+    background-color: #e50914;
+    border: none;
+}
+
+.login-form .btn-link {
+    color: #737373;
+}
+
+.login-form .text-secondary {
+    color: #737373;
+}

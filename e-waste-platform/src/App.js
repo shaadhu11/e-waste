@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Producer from './components/producer/producer.js'
+import Producer from './components/producer/producer.jsx'
 import Customer from './components/customer/customer.jsx'
 import HomePage from './components/home/home.jsx';
 
@@ -14,7 +14,7 @@ function App() {
         <Route path="/login-customer" element={<Customer />} />
       </Routes>
     </Router>
-
+    
 
 
     // <div className="App">

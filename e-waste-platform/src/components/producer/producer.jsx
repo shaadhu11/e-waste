@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
+
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     businessName: '',
@@ -82,6 +83,7 @@ const RegistrationForm = () => {
           Register
         </Button>
       </Form>
+      
     </Container>
   );
 };
