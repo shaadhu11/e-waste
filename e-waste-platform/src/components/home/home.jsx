@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; // Update here
-
+import Customer from './components/customer/customerReg.jsx'
 const HomePage = () => {
   const navigate = useNavigate(); // Update here
 
@@ -43,6 +43,7 @@ const HomePage = () => {
           </Row>
         </Card.Body>
       </Card>
+
     </Container>
   );
 };
