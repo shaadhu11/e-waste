@@ -1,34 +1,119 @@
-/* HomePage.css */
+ /* HomePage.css
 
 .homepage-container {
-    background-color: #f8f9fa; /* Light gray background for a clean look */
-    min-height: 100vh; /* Ensures full height to vertically center content */
+    background-color: #f0f2f5;
+    min-height: 100vh; 
+    margin: 3rem;
+
   }
   
   .homepage-title {
-    font-size: 2.5rem; /* Large and prominent title */
-    font-weight: 700; /* Bold text */
-    color: #343a40; /* Dark color for contrast */
+    font-size: 2.5rem;
+    font-weight: 700; 
+    color: #343a40; 
   }
   
   .homepage-subtitle {
-    font-size: 1.2rem; /* Subtitle with slightly smaller text */
-    color: #6c757d; /* Muted color for subtitle */
+    font-size: 1.2rem; 
+    color: #6c757d; 
   }
   
   .homepage-button {
-    font-size: 1.1rem; /* Slightly larger button text */
-    font-weight: 500; /* Medium weight for a balanced look */
+    font-size: 1.1rem;
+    font-weight: 500; 
   }
   
   .card {
-    background-color: #ffffff; /* White card background */
-    border-radius: 8px; /* Rounded corners */
-    max-width: 600px; /* Max width to keep it compact */
-    width: 100%; /* Ensure it takes full width on smaller screens */
+    
+    background-color: #ffffff; 
+    border-radius: 8px;
+    max-width: 600px; 
+    width: 100%; 
   }
   
   .shadow-lg {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Soft shadow for a floating effect */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
   }
   
+
+
+
+
+
+
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .homepage-background {
+  background-image:url('C:\Users\DELL\e-waste\e-waste-platform\public\images\bg.png');
+  
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.homepage-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(143, 136, 136, 0.6); /* Dark overlay with opacity */
+  backdrop-filter: blur(1px); /* Blur effect */
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Place content above the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #b6a9a9;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
+
+
+
+ .text-center h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#dropdown-basic-button {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+}
+
+#dropdown-basic-button .dropdown-menu {
+  margin-top: 0;
+}
+
+.dropdown-menu {
+  width: 100%;
+  text-align: center;
+}
+
