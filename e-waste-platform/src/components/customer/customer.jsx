@@ -73,6 +73,7 @@ const Buyer = () => {
           <Form.Label>Additional Information</Form.Label>
           <Form.Control
             as="textarea"
+            
             rows={3}
             placeholder="Provide any additional information"
             name="additionalInfo"
