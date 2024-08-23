@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Producer from './components/producer/producer.jsx'
-import Customer from './components/customer/customerReg.jsx';
+import CustomerReg from './components/customer/customerReg.jsx';
 import Customer from './components/customer/customerLogin.jsx'
 import HomePage from './components/home/home.jsx';
 
