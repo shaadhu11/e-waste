@@ -102,7 +102,7 @@ const HomePage = () => {
           className="mt-3"
         >
           <Dropdown.Item href="/login-producer">Login as Producer</Dropdown.Item>
-          <Dropdown.Item href="/login-customer">Login as Customer</Dropdown.Item>
+          <Dropdown.Item href="/login-cust">Login as Customer</Dropdown.Item>
         </DropdownButton>
       </div>
     </div>
