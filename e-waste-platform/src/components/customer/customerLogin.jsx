@@ -1,10 +1,10 @@
 import React from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate} from 'react-router-dom'
-import './customer.css'
+import './customerLogin.css'
 
 
-const Login = () => {
+const CustLogin = () => {
     const Navigate = useNavigate();
     const handleCustReg = ()=>{
         Navigate("/reg-cust");
@@ -16,7 +16,6 @@ const Login = () => {
                     <Col md={6} lg={4}>
                         <div className="login-form">
                             <h3 className="text-center">Sign In</h3>
-                            
                             <Form>
                                 <Form.Group controlId="formEmail">
                                     <Form.Control type="email" placeholder="Email or mobile number" />
@@ -30,6 +29,17 @@ const Login = () => {
                                     Sign In
                                 </Button>
                                 
+                                
+                                
+
+                            </Form>
+                            <div className='icons'>   
+                        
+                                         <img src='google.svg' alt='google' className='image'/>
+                                         <img src='apple.svg' alt='google' className='image'/>
+                                         <img src='facebook.svg' alt='google' className='image'/>
+                                </div>
+
                                 <div className="text-center mt-3">
                                     <Button variant="link" className="text-secondary">Use a sign-in code</Button>
                                 </div>
@@ -37,20 +47,16 @@ const Login = () => {
                                     <a href="#" className="text-secondary">Forgot password?</a>
                                 </div>
 
-                                <Form.Group controlId="formRememberMe" className="mt-3">
-                                    <Form.Check type="checkbox" label="Remember me" />
-                                </Form.Group>
+                                
 
                                 <div className="text-center mt-3">
-                                    <span>New to Netflix? <a href="#" className="text-light" onClick={handleCustReg}>Sign up now.</a></span>
+                                    <span>New to E-Waste <a href="#" className="text-light" onClick={handleCustReg}>  Sign up now.</a></span>
                                 </div>
-                            </Form>
                         </div>
                     </Col>
                 </Row>
             </Container>
         </div>
-    );
-};
+    );};
 
-export default Login;
+export default CustLogin;

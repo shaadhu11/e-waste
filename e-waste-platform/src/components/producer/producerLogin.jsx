@@ -1,15 +1,12 @@
 import React from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import './producer.css';
 
-const Login = () => {
+import './producerLogin.css';
+
+const ProducerLogin = () => {
     const navigate = useNavigate(); // Update here
-
     const handleProducerReg = () => {
         navigate('/reg-producer');
     };
@@ -66,4 +63,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default ProducerLogin;

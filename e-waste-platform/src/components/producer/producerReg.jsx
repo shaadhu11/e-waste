@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './customerReg.css';
+
 
 function CustReg() {
   const [formData, setFormData] = useState({
@@ -114,17 +114,7 @@ function CustReg() {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="city">city:</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        
 
 
 
