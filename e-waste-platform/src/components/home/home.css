@@ -1,119 +1,26 @@
- /* HomePage.css
-
-.homepage-container {
-    background-color: #f0f2f5;
-    min-height: 100vh; 
-    margin: 3rem;
-
-  }
-  
-  .homepage-title {
-    font-size: 2.5rem;
-    font-weight: 700; 
-    color: #343a40; 
-  }
-  
-  .homepage-subtitle {
-    font-size: 1.2rem; 
-    color: #6c757d; 
-  }
-  
-  .homepage-button {
-    font-size: 1.1rem;
-    font-weight: 500; 
-  }
-  
-  .card {
-    
-    background-color: #ffffff; 
-    border-radius: 8px;
-    max-width: 600px; 
-    width: 100%; 
-  }
-  
-  .shadow-lg {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
-  }
-  
-
-
-
-
-
-
-
-
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
- .homepage-background {
-  background-image:url('C:\Users\DELL\e-waste\e-waste-platform\public\images\bg.png');
-  
-
+/* Styles for the homepage */
+.homepage-background {
+  background-image: url('C:\Users\DELL\e-waste\e-waste-platform\public\images\bg.png'); /* Add your background image path */
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100vw;
+  background-repeat: no-repeat;
 }
 
-.homepage-background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(143, 136, 136, 0.6); /* Dark overlay with opacity */
-  backdrop-filter: blur(1px); /* Blur effect */
-  z-index: 0;
-}
-
-.content {
-  position: relative;
-  z-index: 2; /* Place content above the overlay */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #b6a9a9;
-  text-align: center;
-  padding: 0 20px;
-}
-
-
-
-
-
- .text-center h1 {
+.content h1 {
+  color: #085525;
   font-size: 3rem;
-  color: #333;
   margin-bottom: 20px;
+  align-items: left;
 }
 
-#dropdown-basic-button {
+.get-started-btn {
   font-size: 1.5rem;
   padding: 10px 30px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#dropdown-basic-button .dropdown-menu {
-  margin-top: 0;
+.get-started-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
-
-.dropdown-menu {
-  width: 100%;
-  text-align: center;
-}
-
