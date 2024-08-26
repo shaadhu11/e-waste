@@ -1,14 +1,17 @@
 import React from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { useNavigate} from 'react-router-dom'
-import './customerLogin.css'
+import { useNavigate } from 'react-router-dom';
 
 
-const CustLogin = () => {
-    const Navigate = useNavigate();
-    const handleCustReg = ()=>{
-        Navigate("/reg-cust");
+import './login.css';
+
+const Login = () => {
+    const navigate = useNavigate(); // Update here
+    const handleRegistration = () => {
+        navigate('/registration');
     };
+
+
     return (
         <div className="login-background">
             <Container>
@@ -50,13 +53,14 @@ const CustLogin = () => {
                                 
 
                                 <div className="text-center mt-3">
-                                    <span>New to E-Waste <a href="#" className="text-light" onClick={handleCustReg}>  Sign up now.</a></span>
+                                    <span>New to E-Waste <a href="#" className="text-light" onClick={handleRegistration}>  Sign up now.</a></span>
                                 </div>
                         </div>
                     </Col>
                 </Row>
             </Container>
         </div>
-    );};
+    );
+};
 
-export default CustLogin;
+export default Login;
