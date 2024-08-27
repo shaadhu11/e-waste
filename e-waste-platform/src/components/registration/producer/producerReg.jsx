@@ -1,35 +1,31 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
 import './producerReg.css';
+import { Row, Col, Button } from 'react-bootstrap';
 
-function ProducerReg() {
-  
-  
+function producerReg() {
   const [formData, setFormData] = useState({
-
     firstName: '',
     lastName: '',
-    email: '',
+    emailAddress: '',
     phoneNumber: '',
-    wasteLocationBuilding: '',
-    streetAddress: '',
+    address: '',
     city: '',
+    postalCode: '',
+    state: '',
     password: '',
     confirmPassword: '',
     errorMessage: '',
-    wasteOriginClassification: '',
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value, errorMessage: ''// Clear error message on change
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value,errorMessage: '' });
   };
   const checkPasswordStrength = (password) => {
     const hasLowerCase = /[a-z]/.test(password);
     const hasUpperCase = /[A-Z]/.test(password);
     const hasNumber = /[0-9]/.test(password);
-    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);
+    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);   
 
     const length = password.length;
 
@@ -52,8 +48,13 @@ function ProducerReg() {
         return 'Strong';
       default:
         return 'Invalid'; // Handle unexpected cases
-    }
-  };
+   
+      }
+    
+    
+};
+  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,8 +69,10 @@ function ProducerReg() {
 
   return (
     <div className="registration-form">
-      <h2>Registration Form</h2>
+      <h2>Registration</h2>
       <form onSubmit={handleSubmit}>
+      <Row>
+      <Col md={6}>
       <div className="form-group">
           <label htmlFor="typeOfWorkGenerator">Types of Waste Generator:</label>
           <select
@@ -89,7 +92,10 @@ function ProducerReg() {
             <option value="Mall">Shop</option>
             <option value="RWA">ULB</option>
           </select>
+          
         </div>
+        </Col>
+        <Col md={6}>
         <div className="form-group">
           <label htmlFor="nameOfCorporateOrInstitution">Name of Corporate/Educational Institution/ULB/Mall/Shop/Individual:</label>
           <input
@@ -100,10 +106,15 @@ function ProducerReg() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div className="form-g">
-          <label htmlFor="firstName">First   
- Name:</label>
+        </div> 
+        </Col>
+        </Row>
+      
+      <Row>
+      <Col md={6}>
+        <div className="form-group">
+          <label  
+           htmlFor="firstName">First Name</label>
           <input
             type="text"
             id="firstName"
@@ -112,10 +123,11 @@ function ProducerReg() {
             onChange={handleChange}
             required
           />
-        </div>   
+        </div> 
+        </Col>
+        <Col md={6}>
         <div className="form-g">
-          <label htmlFor="LastName">Last  
- Name:</label>
+          <label htmlFor="LastName">Last Name:</label>
           <input
             type="text"
             id="LastName"
@@ -125,8 +137,11 @@ function ProducerReg() {
             required
           />
         </div>  
-
-        <div className="form-g">
+        </Col>
+        </Row>
+        <Row>
+      <Col md={6}>
+      <div className="form-g">
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -136,8 +151,10 @@ function ProducerReg() {
             onChange={handleChange}
             required
           />
-        </div>   
-
+        </div>
+        </Col>
+        <Col md={6}>
+        {/* ... other form fields */}
         <div className="form-group">
           <label htmlFor="phoneNumber">PhoneNumber:</label>
           <input
@@ -149,10 +166,10 @@ function ProducerReg() {
             required
           />
         </div>
-
-       
-
-        <div className="form-group">
+        </Col>
+        </Row> <Row>
+      <Col md={6}>
+      <div className="form-group">
           <label htmlFor="Address">Address:</label>
           <input
             type="text"
@@ -163,7 +180,9 @@ function ProducerReg() {
             required
           />
         </div>
-
+        </Col>
+        <Col md={6}>
+        {/* ... other form fields */}
         <div className="form-group">
           <label htmlFor="city">City:</label>
           <input
@@ -174,20 +193,11 @@ function ProducerReg() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="state">State:</label>
-          <input
-            type="text"
-            id="state"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            required
-          />
-        </div>
-       
-       <div className="form-group">
+       </div>
+        </Col>
+        </Row> <Row>
+      <Col md={6}>
+      <div className="form-group">
           <label htmlFor="postalcode">Postal code:</label>
           <input
             type="text"
@@ -198,20 +208,38 @@ function ProducerReg() {
             required
           />
         </div>
-        <label htmlFor="password">Password:</label>   
-
+        </Col>
+        <Col md={6}>
+        {/* ... other form fields */}
+       
+        <div className="form-group">
+          <label htmlFor="state">State:</label>
+          <input
+            type="text"
+            id="state"
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+            required
+          />
+       </div>
+        </Col>
+        </Row> <Row>
+      <Col md={6}>
+      <label htmlFor="password">Password:</label>   
+      <div className="form-group">
           <input
             type="password"
             id="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
-            minLength={8}
-            required   
-
-          />
-          <p className="password-strength">{checkPasswordStrength(formData.password)}</p>
-        
+            minLength={8} required
+            /> 
+            <p className="password-strength">{checkPasswordStrength(formData.password)}</p>
+      </div>
+        </Col>
+        <Col md={6}>
         <div className="form-group">
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
@@ -227,25 +255,13 @@ function ProducerReg() {
           />
            {formData.errorMessage && <p className="error-message">{formData.errorMessage}</p>}
         </div>
-       
+        </Col>
+        </Row>
 
-
-
-        {/* Add other form fields similarly */}
-        <div className="form-group">
-          <label htmlFor="wasteOriginClassification">Waste Origin Classification/Description:</label>
-          <textarea
-            id="wasteOriginClassification"
-            name="wasteOriginClassification"
-            value={formData.wasteOriginClassification}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit">Submit Form</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
 }
 
-export default ProducerReg;
+export default producerReg;
