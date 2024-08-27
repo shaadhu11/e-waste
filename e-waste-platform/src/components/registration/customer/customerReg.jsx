@@ -17,20 +17,19 @@ function CustReg() {
     password: '',
     confirmPassword: '',
     errorMessage: '',
-    wasteOriginClassification: '',
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,errorMessage: ''// Clear error message on change
+      [e.target.name]: e.target.value, errorMessage: ''// Clear error message on change
     });
   };
     const checkPasswordStrength = (password) => {
     const hasLowerCase = /[a-z]/.test(password);
     const hasUpperCase = /[A-Z]/.test(password);
     const hasNumber = /[0-9]/.test(password);
-    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);   
+    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);
 
     const length = password.length;
 
@@ -58,9 +57,8 @@ function CustReg() {
     
     
 };
-  
-
-  const handleSubmit = (e) => {
+// eslint-disable-next-line no-unused-vars
+const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     if (formData.password !== formData.confirmPassword) {
@@ -69,7 +67,6 @@ function CustReg() {
       document.getElementById('password').focus();
       return;
     }
-  
   };
   
   
@@ -233,13 +230,13 @@ return (
         <Col md={6}>
           <Form.Group controlId="formFirstName">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter your first name" />
+            <Form.Control type="text"  />
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="formLastName">
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter your last name" />
+            <Form.Control type="text"  />
           </Form.Group>
         </Col>
       </Row>
@@ -247,28 +244,79 @@ return (
         <Col md={6}>
           <Form.Group controlId="formEmail">
             <Form.Label>Email Address</Form.Label>
-            <Form.Control type="email" placeholder="Enter your email" />
+            <Form.Control type="email"  />
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="formPhone">
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control type="text" placeholder="Enter your phone number" />
+            <Form.Control type="text" />
           </Form.Group>
         </Col>
       </Row>
       <Row>
         <Col md={6}>
-          <Form.Group controlId="formPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Enter your password" />
+          <Form.Group controlId="formAddress">
+            <Form.Label>Address</Form.Label>
+            <Form.Control type="address"  />
           </Form.Group>
         </Col>
         <Col md={6}>
-          <Form.Group controlId="formConfirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="Confirm your password" />
+          <Form.Group controlId="formCity">
+            <Form.Label>City</Form.Label>
+            <Form.Control type="text"  />
           </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          <Form.Group controlId="formPostalcode">
+            <Form.Label>Postal Code</Form.Label>
+            <Form.Control type="text"  />
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          <Form.Group controlId="formState">
+            <Form.Label>State</Form.Label>
+            <Form.Control type="text"  />
+          </Form.Group>
+        </Col>
+      </Row>
+     <Row>
+        <Col md={6}>
+        <div className="Form-Group">
+        <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            minLength={8}
+            required   
+
+          />
+          <p className="password-strength">{checkPasswordStrength(formData.password)}</p>
+          </div>
+          
+        </Col>
+        <Col md={6}>
+        <div className="Form-Group">
+          <label htmlFor="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"   
+
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            minLength={8}
+            required
+            className={formData.errorMessage && 'error-input'} // Add error class
+          />
+           {formData.errorMessage && <p className="error-message">{formData.errorMessage}</p>}
+        </div>
+       
         </Col>
       </Row>
       <Button variant="primary" type="submit" className="mt-3">
