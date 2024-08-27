@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './producerReg.css';
 
-function CustReg() {
+function ProducerReg() {
   
   
   const [formData, setFormData] = useState({
-
+  
     firstName: '',
     lastName: '',
     email: '',
@@ -248,4 +248,4 @@ function CustReg() {
   );
 }
 
-export default CustReg;
+export default ProducerReg;
