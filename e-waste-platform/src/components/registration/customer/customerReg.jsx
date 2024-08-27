@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+
 import './customerReg.css';
 
 
@@ -72,155 +74,210 @@ function CustReg() {
   
   
 
-  return (
-    <div className="registration-form">
-      <h2>Registration Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-g">
-          <label htmlFor="firstName">First   
- Name:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-        </div>   
-        <div className="form-g">
-          <label htmlFor="LastName">Last  
- Name:</label>
-          <input
-            type="text"
-            id="LastName"
-            name="LastName"
-            value={formData.LastName}
-            onChange={handleChange}
-            required
-          />
-        </div>  
+//   return (
+//     <div className="registration-form">
+//       <h2>Registration Form</h2>
+//       <form onSubmit={handleSubmit}>
+//         <div className="form-g">
+//           <label htmlFor="firstName">First
+//  Name:</label>
+//           <input
+//             type="text"
+//             id="firstName"
+//             name="firstName"
+//             value={formData.firstName}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>   
+//         <div className="form-g">
+//           <label htmlFor="LastName">Last  
+//  Name:</label>
+//           <input
+//             type="text"
+//             id="LastName"
+//             name="LastName"
+//             value={formData.LastName}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>  
 
-        <div className="form-g">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>   
+//         <div className="form-g">
+//           <label htmlFor="email">Email:</label>
+//           <input
+//             type="text"
+//             id="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>   
 
-        <div className="form-group">
-          <label htmlFor="phoneNumber">PhoneNumber:</label>
-          <input
-            type="text"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required
-          />
-        </div>
+//         <div className="form-group">
+//           <label htmlFor="phoneNumber">PhoneNumber:</label>
+//           <input
+//             type="text"
+//             id="phoneNumber"
+//             name="phoneNumber"
+//             value={formData.phoneNumber}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
 
 
         
 
-        <div className="form-group">
-          <label htmlFor="Address">Address:</label>
-          <input
-            type="text"
-            id="Address"
-            name="Address"
-            value={formData.Address}
-            onChange={handleChange}
-            required
-          />
-        </div>
+//         <div className="form-group">
+//           <label htmlFor="Address">Address:</label>
+//           <input
+//             type="text"
+//             id="Address"
+//             name="Address"
+//             value={formData.Address}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
 
        
-        <div className="form-group">
-          <label htmlFor="city">City:</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            required
-          />
-       </div>
-       <div className="form-group">
-          <label htmlFor="state">State:</label>
-          <input
-            type="text"
-            id="state"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            required
-          />
-       </div>
-       <div className="form-group">
-          <label htmlFor="postalcode">Postal code:</label>
-          <input
-            type="text"
-            id="postalcode"
-            name="postalcode"
-            value={formData.postalcode}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <label htmlFor="password">Password:</label>   
+//         <div className="form-group">
+//           <label htmlFor="city">City:</label>
+//           <input
+//             type="text"
+//             id="city"
+//             name="city"
+//             value={formData.city}
+//             onChange={handleChange}
+//             required
+//           />
+//        </div>
+//        <div className="form-group">
+//           <label htmlFor="state">State:</label>
+//           <input
+//             type="text"
+//             id="state"
+//             name="state"
+//             value={formData.state}
+//             onChange={handleChange}
+//             required
+//           />
+//        </div>
+//        <div className="form-group">
+//           <label htmlFor="postalcode">Postal code:</label>
+//           <input
+//             type="text"
+//             id="postalcode"
+//             name="postalcode"
+//             value={formData.postalcode}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+//         <label htmlFor="password">Password:</label>   
 
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            minLength={8}
-            required   
+//           <input
+//             type="password"
+//             id="password"
+//             name="password"
+//             value={formData.password}
+//             onChange={handleChange}
+//             minLength={8}
+//             required   
 
-          />
+//           />
          
-          <p className="password-strength">{checkPasswordStrength(formData.password)}</p>
+//           <p className="password-strength">{checkPasswordStrength(formData.password)}</p>
          
-        <div className="form-group">
-          <label htmlFor="confirmPassword">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirmPassword"   
+//         <div className="form-group">
+//           <label htmlFor="confirmPassword">Confirm Password:</label>
+//           <input
+//             type="password"
+//             id="confirmPassword"   
 
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            minLength={8}
-            required
-            className={formData.errorMessage && 'error-input'} // Add error class
-          />
-           {formData.errorMessage && <p className="error-message">{formData.errorMessage}</p>}
-        </div>
+//             name="confirmPassword"
+//             value={formData.confirmPassword}
+//             onChange={handleChange}
+//             minLength={8}
+//             required
+//             className={formData.errorMessage && 'error-input'} // Add error class
+//           />
+//            {formData.errorMessage && <p className="error-message">{formData.errorMessage}</p>}
+//         </div>
         
 
-        {/* Add other form fields similarly */}
-        <div className="form-group">
-          <label htmlFor="wasteOriginClassification">Waste Origin Classification/Description:</label>
-          <textarea
-            id="wasteOriginClassification"
-            name="wasteOriginClassification"
-            value={formData.wasteOriginClassification}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit">Submit Form</button>
-      </form>
-    </div>
-  );
+//         {/* Add other form fields similarly */}
+//         <div className="form-group">
+//           <label htmlFor="wasteOriginClassification">Waste Origin Classification/Description:</label>
+//           <textarea
+//             id="wasteOriginClassification"
+//             name="wasteOriginClassification"
+//             value={formData.wasteOriginClassification}
+//             onChange={handleChange}
+//             required
+//           ></textarea>
+//         </div>
+//         <button type="submit">Submit Form</button>
+//       </form>
+//     </div>
+//   );
+
+
+return (
+  <Container className="registration-container">
+    <h2 className="form-title">Registration</h2>
+    <Form>
+      <Row>
+        <Col md={6}>
+          <Form.Group controlId="formFirstName">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter your first name" />
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          <Form.Group controlId="formLastName">
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter your last name" />
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email Address</Form.Label>
+            <Form.Control type="email" placeholder="Enter your email" />
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          <Form.Group controlId="formPhone">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control type="text" placeholder="Enter your phone number" />
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Enter your password" />
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          <Form.Group controlId="formConfirmPassword">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control type="password" placeholder="Confirm your password" />
+          </Form.Group>
+        </Col>
+      </Row>
+      <Button variant="primary" type="submit" className="mt-3">
+        Register
+      </Button>
+    </Form>
+  </Container>
+);
+
   }
 
 export default CustReg;

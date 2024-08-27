@@ -11,16 +11,16 @@ const Signup = () => {
   const handleUserTypeChange = (val) => setUserType(val);
 
   return (
-    <Container fluid className="vh-100 d-flex align-items-center justify-content-center bg-light ">
+    <Container fluid className="vh-80 d-flex align-items-center justify-content-center bg-light ">
       <Row className="w-100">
-        <Col md={8} lg={6} xl={5} className="mx-auto">
+        <Col md={8} lg={6} xl={10} className="mx-auto">
           <div className="text-end mb-3">
             <ToggleButtonGroup type="radio" name="userType" value={userType} onChange={handleUserTypeChange}>
               <ToggleButton id="buyer-toggle" variant="outline-primary" value="buyer">
-                Buyer
+                Login as Buyer
               </ToggleButton>
               <ToggleButton id="seller-toggle" variant="outline-secondary" value="seller">
-                Seller
+                 Login as Seller
               </ToggleButton>
             </ToggleButtonGroup>
           </div>
