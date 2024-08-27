@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './producerReg.css';
 
-function CustReg() {
+function ProducerReg() {
   
   
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ function CustReg() {
     const hasLowerCase = /[a-z]/.test(password);
     const hasUpperCase = /[A-Z]/.test(password);
     const hasNumber = /[0-9]/.test(password);
-    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);   
+    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/.test(password);
 
     const length = password.length;
 
@@ -248,4 +248,4 @@ function CustReg() {
   );
 }
 
-export default CustReg;
+export default ProducerReg;
