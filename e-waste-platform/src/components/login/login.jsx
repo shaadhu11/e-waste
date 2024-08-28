@@ -41,20 +41,18 @@ const Login = () => {
                                          <img src='google.svg' alt='google' className='image'/>
                                          <img src='apple.svg' alt='google' className='image'/>
                                          <img src='facebook.svg' alt='google' className='image'/>
-                                </div>
-
-                                <div className="text-center mt-3">
-                                    <Button variant="link" className="text-secondary">Use a sign-in code</Button>
-                                </div>
-                                <div className="text-center mt-3">
-                                    <a href="#" className="text-secondary">Forgot password?</a>
-                                </div>
+                            </div>
+                            
+                                
+                            <div className="text-center mt-3">
+                                <a href="#" className="text-secondary">Forgot password?</a>
+                            </div>
 
                                 
 
-                                <div className="text-center mt-3">
-                                    <span>New to E-Waste <a href="#" className="text-light" onClick={handleRegistration}>  Sign up now.</a></span>
-                                </div>
+                            <div className="text-center mt-3">
+                                <span>New to E-Waste <a href="#" className="text-light" onClick={handleRegistration}>  Sign up now.</a></span>
+                            </div>
                         </div>
                     </Col>
                 </Row>
