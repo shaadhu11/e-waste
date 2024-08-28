@@ -1,26 +1,139 @@
-/* Styles for the homepage */
-.homepage-background {
-  background-image: url('C:\Users\DELL\e-waste\e-waste-platform\public\images\bg.png'); /* Add your background image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Ensure the body has no default margins and occupies full height */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.content h1 {
-  color: #085525;
-  font-size: 3rem;
+/* Main container */
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c2ecc6;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+/* Content container */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  column-gap: 5rem;
+
+}
+
+/* Text container */
+.text-container {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+/* Heading styling */
+.text-container h1 {
+  font-size: 2rem;
+  color: #438344;
+  font-weight: bold;
   margin-bottom: 20px;
-  align-items: left;
 }
 
-.get-started-btn {
-  font-size: 1.5rem;
-  padding: 10px 30px;
-  border-radius: 25px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Platform name styling */
+.text-container .platform-name {
+  font-size: 2.5rem;
 }
 
-.get-started-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+/* Button styling */
+.homepage-container .get-started-btn {
+  background-color: #4caf50 !important; /* Green color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+}
+
+.homepage-container .get-started-btn:hover {
+  background-color: #49504a !important; /* Darker green on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+/* Tagline styling */
+.tagline {
+  color: #2e7d32;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Image container */
+.image-container {
+  max-width: 300px;
+}
+.image-container p{
+  padding: 38px;
+}
+
+
+.recycle-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .text-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-container .platform-name {
+    font-size: 2rem;
+  }
+
+  .get-started-btn {
+    font-size: 0.9rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .text-container .platform-name {
+    font-size: 1.7rem;
+  }
+
+  .get-started-btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
 }

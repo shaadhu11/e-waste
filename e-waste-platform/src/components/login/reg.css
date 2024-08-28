@@ -7,3 +7,40 @@
     margin-top: 10px;
     
 }
+
+.reg.custom-buyer {
+    background-color:rgb(240, 237, 233);
+    color: #135f08;
+    border-color: #1c740b;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .reg.custom-buyer.active {
+    background-color: #9fccaa;
+    color: #fff;
+  }
+  
+  .reg.custom-buyer:hover {
+    background-color: #31be48;
+    color: #35b851;
+  }
+  
+  .reg.custom-seller {
+    background-color: transparent;
+    color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .reg.custom-seller.active {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+.reg.custom-seller:hover {
+    background-color: #5a6268;
+    color: #fff;
+  }
+  
+  
+  
